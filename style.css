@@ -1,3 +1,9 @@
+:root {
+  --background-color: #f7f7f4;
+  --section-background-color: #f2f1ed;
+  --link-text: #f54e00;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,19 +11,21 @@
 }
 
 body {
-  background-color: #f7f7f4;
+  /* background-color: #f7f7f4; */
+  background-color: var(--background-color);
   font-family: Arial, Helvetica, sans-serif;
 }
 
 nav {
   position: fixed;
+  background-color: var(--background-color);
   top: 0;
   left: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 50px;
+  padding: 10px 110px;
   z-index: 10;
 }
 
@@ -28,32 +36,49 @@ nav {
 }
 
 .nav-left h2 {
-  font-weight: 300;
+  font-size: 17px;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 nav .links {
   display: flex;
   justify-items: center;
   align-items: center;
-  gap: 40px;
+  gap: 30px;
 }
 
 nav .links a {
   font-size: 14px;
   cursor: pointer;
+  color: #302f2f;
+  text-decoration: none;
 }
 
 nav .links a:hover {
   color: #7f7979;
 }
 
+nav .buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
 nav .buttons button {
-  padding: 7px 20px;
+  gap: 10px;
+  padding: 5px 10px;
   border: 1px solid;
   border-radius: 16px;
   text-align: center;
-  font-weight: 600;
+  font-weight: 400;
   cursor: pointer;
+  border-color: #bbb4b4;
+}
+
+nav .buttons .sign-in {
+  border-color: #d6d3d3;
 }
 
 nav .buttons button:hover {
@@ -70,14 +95,28 @@ nav .buttons .download {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
   margin-top: 100px;
   padding: 0 50px;
+  width: 100%;
+  padding: 10px 110px;
 }
 
 main p {
   font-size: 30px;
   width: 45%;
   font-weight: 500;
+}
+
+main .first-section button {
+  padding: 15px 30px;
+  margin-top: 22px;
+  border: none;
+  border-radius: 50px;
+  background-color: #302f2f;
+  color: #fcfbfb;
 }
 
 main button {
@@ -89,12 +128,127 @@ main button {
   color: #fcfbfb;
 }
 
-.section-2 div {
-  display: flex;
-  gap: 20px;
+main .first-image img {
+  border-radius: 5px;
 }
 
-.section-2 .images {
-  background-color: #e3e1e1;
-  padding: 20px 50px;
+main .software-name p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+
+main .software-name div {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+main .software-name div .images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d6d3d3;
+  border-radius: 3px;
+  padding: 35px 47px;
+}
+
+main .agents-turn-ideas-into-code,
+.magically-accurate-autocomplete,
+.in-every-tool-at-every-step {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background-color: var(--section-background-color);
+  border-radius: 7px;
+  padding: 20px;
+}
+main .agents-turn-ideas-into-code p,
+main .magically-accurate-autocomplete p,
+main .in-every-tool-at-every-step p {
+  width: 100%;
+  font-size: 24px;
+}
+
+main .agents-turn-ideas-into-code .link,
+main .magically-accurate-autocomplete .link,
+.in-every-tool-at-every-step .link {
+  margin-top: 30px;
+}
+
+main .agents-turn-ideas-into-code a,
+main .magically-accurate-autocomplete a,
+main .in-every-tool-at-every-step a {
+  text-decoration: none;
+  color: var(--link-text);
+}
+
+main .agents-turn-ideas-into-code img,
+main .magically-accurate-autocomplete img,
+main .in-every-tool-at-every-step img {
+  border-radius: 6px;
+}
+
+main .the-new-way-to-build-software h1 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  font-size: 30px;
+}
+
+main .the-new-way-to-build-software {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+main .the-new-way-to-build-software .all-detials {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 17px;
+}
+
+main .the-new-way-to-build-software .all-detials .build-software {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: var(--section-background-color);
+  padding: 20px;
+  border-radius: 7px;
+}
+
+main .the-new-way-to-build-software .build-software p {
+  font-size: 17px;
+  width: 100%;
+}
+
+
+main .the-new-way-to-build-software .build-software .name {
+  color: #3f3b3b;
+}
+
+main .the-new-way-to-build-software .all-detials .build-software .detials {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+main .the-new-way-to-build-software .all-detials .build-software img {
+  width: 30px;
+  height: 30px;
+}
+
+main .the-new-way-to-build-software .all-detials .build-software .detials .name-location .name{
+  font-size: 15px;
+  color: #302f2f;
+}
+
+main .the-new-way-to-build-software .all-detials .build-software .detials .location{
+  font-size: 12px;
+  color: #7f7979;
 }
