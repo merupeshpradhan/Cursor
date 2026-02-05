@@ -4,13 +4,87 @@
   box-sizing: border-box;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  margin: 20px;
+body {
+  background-color: #f7f7f4;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-nav .links{
-    display: flex;
-    gap: 24px;
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  z-index: 10;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.nav-left h2 {
+  font-weight: 300;
+}
+
+nav .links {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  gap: 40px;
+}
+
+nav .links a {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+nav .links a:hover {
+  color: #7f7979;
+}
+
+nav .buttons button {
+  padding: 7px 20px;
+  border: 1px solid;
+  border-radius: 16px;
+  text-align: center;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+nav .buttons button:hover {
+  background-color: #5b5555;
+}
+
+nav .buttons .sign-in:hover {
+  background-color: #d6d3d3;
+}
+
+nav .buttons .download {
+  background-color: #3f3b3b;
+  color: #fcfbfb;
+}
+
+main {
+  margin-top: 100px;
+  padding: 0 50px;
+}
+
+main p {
+  font-size: 30px;
+  width: 45%;
+  font-weight: 500;
+}
+
+main button {
+  padding: 10px 20px;
+  margin-top: 22px;
+  border: none;
+  border-radius: 50px;
+  background-color: #302f2f;
+  color: #fcfbfb;
 }
